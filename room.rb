@@ -7,4 +7,8 @@ attr_reader :name, :capacity, :guests
     @capacity = capacity
     @guests = guests
   end
+
+  def guest_count
+    return @guests.length
+  end
 end
