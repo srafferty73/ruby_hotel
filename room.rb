@@ -19,4 +19,12 @@ attr_reader :name, :capacity, :guests
   def remove_guest(guest)
     @guests.delete(guest)
   end
+
+  def empty_room
+    # @guests = [] - WILL work by reassigning the variable to be empty
+    # @guests.each {|guest| remove_guest(guest)} - WONT work - decreasing array
+    while guest_count() > 0
+      @guests.pop
+    end
+  end
 end
