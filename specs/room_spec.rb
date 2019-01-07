@@ -30,4 +30,9 @@ class RoomTest < MiniTest::Test
   def test_can_count_guest__not_empty
     assert_equal(1, @room2.guest_count)
   end
+
+  def test_can_add_guest
+    @room1.add_guest(@guest1)
+    assert_equal("Stephen", @room1.guests[0].name)
+  end
 end

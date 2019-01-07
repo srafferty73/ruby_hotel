@@ -11,4 +11,8 @@ attr_reader :name, :capacity, :guests
   def guest_count
     return @guests.length
   end
+
+  def add_guest(guest)
+    @guests.push(guest)
+  end
 end
